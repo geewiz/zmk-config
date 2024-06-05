@@ -2,14 +2,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define _DEFAULT 0
-#define _GAME 1
-#define _NAVI 2
-#define _SYMBOL 3
-#define _NUMBER 4
-#define _MOUSE 5
-#define _MEDIA 6
-#define _ADJUST 7
+enum layer_names {
+  _DEFAULT=0,
+  _COLEMAK,
+  _GAME,
+  _NAVI,
+  _SYMBOL,
+  _NUMBER,
+  _MOUSE,
+  _MEDIA,
+  _ADJUST
+}
 
 #define TAPPING_TERM 150
 #define QUICK_TAP 200
@@ -25,6 +28,9 @@
 #define LY_NAV &mo _NAVI
 #define LY_NUM &mo _NUMBER
 #define LY_ADJ &mo _ADJUST
+
+/* Layers (toggle) */
+#define LY_COL &tog _COLEMAK
 
 /* Layer taps */
 #define ESC_NAV &lt _NAVI ESC
@@ -108,19 +114,29 @@
                 default_layer {
                         label = "QWERTY";
                         bindings = <
-   &kp Q      &kp W           &kp E           &kp R       &kp T        &kp Y            &kp U        &kp I        &kp O      &kp P
-   &kp A      &kp S           &kp D           &kp F       &kp G        &kp H            &kp J        &kp K        &kp L      &kp SQT
-   &kp Z      &kp X           &kp C           &kp V       &kp B        &kp N            &kp M        &kp COMMA    &kp DOT    &kp FSLH
+   &kp Q      &kp W           &kp E           &kp R       &kp T           &kp Y            &kp U        &kp I        &kp O      &kp P
+   &kp A      &kp S           &kp D           &kp F       &kp G           &kp H            &kp J        &kp K        &kp L      &kp SQT
+   &kp Z      &kp X           &kp C           &kp V       &kp B           &kp N            &kp M        &kp COMMA    &kp DOT    &kp FSLH
               &none           LY_NAV          &kp LSHFT                                 &kp SPC      LY_SYM       &none
+                        >;
+                };
+
+                colemak_layer {
+                        label = "COLEMAK";
+                        bindings = <
+   &kp Q      &kp W           &kp F           &kp P       &kp B           &kp J            &kp L        &kp U        &kp Y      &kp SQT
+   &kp A      &kp R           &kp S           &kp T       &kp G           &kp M            &kp N        &kp E        &kp I      &kp O
+   &kp Z      &kp X           &kp C           &kp D       &kp V           &kp K            &kp H        &kp COMMA    &kp DOT    &kp FSLH
+              &trans          &trans          &trans                                       &trans       &trans       &trans
                         >;
                 };
 
                 game_layer {
                         label = "GAME";
                         bindings = <
-   &kp Q      &kp W      &kp E       &kp R       &kp T   &kp Y &kp U        &kp I        &kp O      &kp P
-   &kp A      &kp S      &kp D       &kp F       &kp G   &kp H &kp J        &kp K        &kp L      &kp SQT
-   &kp Z      &kp X      &kp C       &kp V       &kp B   &kp N &kp M        &kp COMMA    &kp DOT    &kp FSLH
+   &kp Q      &kp W      &kp E       &kp R       &kp T      &kp Y &kp U        &kp I        &kp O      &kp P
+   &kp A      &kp S      &kp D       &kp F       &kp G      &kp H &kp J        &kp K        &kp L      &kp SQT
+   &kp Z      &kp X      &kp C       &kp V       &kp B      &kp N &kp M        &kp COMMA    &kp DOT    &kp FSLH
               &kp LGUI   &mo 1       &kp SPACE                 &kp RET      &mo 2        &kp RALT
                         >;
                 };
@@ -128,9 +144,9 @@
                 navi_layer {
                         label = "NAVI";
                         bindings = <
-   &sk RGUI   &sk RALT   &sk RCTRL   &sk RSHFT   &none        &kp TAB     &kp ESC      &none       &none      &caps_word
-   &sk LGUI   &sk LALT   &sk LCTRL   &sk LSHFT   &kp LGUI     &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp ENTER
-   &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)   &kp INS      &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp DEL
+   &sk RGUI   &sk RALT   &sk RCTRL   &sk RSHFT   &none           &kp TAB     &kp ESC      &none       &none      &caps_word
+   &sk LGUI   &sk LALT   &sk LCTRL   &sk LSHFT   &kp LGUI        &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp ENTER
+   &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)   &kp INS         &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp DEL
               &none      &trans      &none                                &kp BSPC     &kp RET     &none
                         >;
                 };
@@ -138,9 +154,9 @@
                 symbol_layer {
                         label = "SYMBOL";
                         bindings = <
-   &kp EXCL   &kp AT       &kp HASH     &kp DLLR    &kp PRCNT  &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-   &none      &kp LBRC     &kp LBKT     &kp LPAR    &kp GRAVE  &kp TILDE &kp MINUS &kp PLUS  &kp EQUAL &none
-   &kp PIPE   &kp RBRC     &kp RBKT     &kp RPAR    &none      &none     &kp UNDER &kp SEMI  &kp COLON &kp BSLH
+   &kp EXCL   &kp AT       &kp HASH     &kp DLLR    &kp PRCNT     &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
+   &none      &kp LBRC     &kp LBKT     &kp LPAR    &kp GRAVE     &kp TILDE &kp MINUS &kp PLUS  &kp EQUAL &none
+   &kp PIPE   &kp RBRC     &kp RBKT     &kp RPAR    &none         &none     &kp UNDER &kp SEMI  &kp COLON &kp BSLH
               &none        LY_ADJ       LY_NUM                 &none     &trans    &none
                         >;
                 };
@@ -148,9 +164,9 @@
                 number_layer {
                         label = "NUMBER";
                         bindings = <
-   &kp N1     &kp N2    &kp N3    &kp N4       &kp N5     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-   &sk LGUI   &sk LALT  &sk LCTRL &sk LSHFT    &none      &kp MINUS &kp PLUS  &kp STAR  &kp FSLH  &none
-   &none      &none     &kp TAB   &kp BSPC     &none      &none     &none     &kp COMMA &kp DOT   &none
+   &kp N1     &kp N2    &kp N3    &kp N4       &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
+   &sk LGUI   &sk LALT  &sk LCTRL &sk LSHFT    &none         &kp MINUS &kp PLUS  &kp STAR  &kp FSLH  &none
+   &none      &none     &kp TAB   &kp BSPC     &none         &none     &none     &kp COMMA &kp DOT   &none
               &none     &none     &trans                            &none     &trans    &none
                         >;
                 };
@@ -158,9 +174,9 @@
                 mouse_layer {
                         label = "MOUSE";
                         bindings = <
-   &kp LG(N1) &kp LG(N2) &kp LG(N3)  &kp LG(4)   &kp LG(5)  &kp LG(6) &kp LG(7)    &kp LG(8)    &kp LG(9)  &kp LG(0)
-   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none      &none     &none        &none        &none      &none
-   &none      &none      &none       &none       &none      &none     &none        &none        &none      &none
+   &kp LG(N1) &kp LG(N2) &kp LG(N3)  &kp LG(4)   &kp LG(5)     &kp LG(6) &kp LG(7)    &kp LG(8)    &kp LG(9)  &kp LG(0)
+   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none         &none     &none        &none        &none      &none
+   &none      &none      &none       &none       &none         &none     &none        &none        &none      &none
               &trans     &trans      &trans                           &trans       LY_ADJ       &trans
                         >;
                 };
@@ -168,9 +184,9 @@
                 media_layer {
                         label = "MEDIA";
                         bindings = <
-   &none      &none      &none       &none       &none      &none       &none         &none         &none          &none
-   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none      &none       &kp K_PP      &kp K_STOP2   &kp K_PREV     &kp K_NEXT
-   &none      &none      &none       &none       &none      &none       &kp K_VOL_DN  &kp K_MUTE    &kp K_VOL_UP   &none
+   &none      &none      &none       &none       &none         &none       &none         &none         &none          &none
+   &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none         &none       &kp K_PP      &kp K_STOP2   &kp K_PREV     &kp K_NEXT
+   &none      &none      &none       &none       &none         &none       &kp K_VOL_DN  &kp K_MUTE    &kp K_VOL_UP   &none
               &none      &none       &none                              &none         &none         &trans
                         >;
                 };
@@ -178,9 +194,9 @@
                 adjust_layer {
                         label = "ADJUST";
                         bindings = <
-   &kp F1      &kp F2       &kp F3          &kp F4      &kp F5           &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-   &kp LGUI    &kp LALT     &kp LCTRL       &kp LSHFT   &bootloader      &none         &none         &none         &none         &none
-   &kp F11     &kp F12      &kp PAUSE_BREAK &kp PSCRN   &kp SLCK         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
+   &kp F1      &kp F2       &kp F3          &kp F4      &kp F5              &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
+   &kp LGUI    &kp LALT     &kp LCTRL       &kp LSHFT   &bootloader         &none         LY_COL        &none         &none         &none
+   &kp F11     &kp F12      &kp PAUSE_BREAK &kp PSCRN   &kp SLCK            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
                &none        &trans          &none                                      &none         &trans        &none
                         >;
                 };
