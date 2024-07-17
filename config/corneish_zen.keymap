@@ -110,17 +110,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "QWERTY";
-                        bindings = <
-   &kp Q      &kp W           &kp E           &kp R       &kp T           &kp Y            &kp U        &kp I        &kp O      &kp P
-   &kp A      &kp S           &kp D           &kp F       &kp G           &kp H            &kp J        &kp K        &kp L      &kp SQT
-   &kp Z      &kp X           &kp C           &kp V       &kp B           &kp N            &kp M        &kp COMMA    &kp DOT    &kp FSLH
-              &none           LY_NAV          &kp LSHFT                                 &kp SPC      LY_SYM       &none
-                        >;
-                };
-
-                colemak_layer {
-                        label = "COLEMAK";
+                        label = "CMAK";
                         bindings = <
    &kp Q      &kp W           &kp F           &kp P       &kp B           &kp J            &kp L        &kp U        &kp Y      &kp SQT
    &kp A      &kp R           &kp S           &kp T       &kp G           &kp M            &kp N        &kp E        &kp I      &kp O
@@ -145,27 +135,27 @@
    &sk RGUI   &sk RALT   &sk RCTRL   &sk RSHFT   &none           &kp TAB     &kp ESC      &none       &none      &caps_word
    &sk LGUI   &sk LALT   &sk LCTRL   &sk LSHFT   &kp LGUI        &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp ENTER
    &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp LC(V)   &kp INS         &kp HOME    &kp PG_DN    &kp PG_UP   &kp END    &kp DEL
-              &none      &trans      &none                                &kp BSPC     &kp RET     &none
+              &none      &trans      &none                                   &kp BSPC     &kp RET     &none
                         >;
                 };
 
                 symbol_layer {
                         label = "SYMBOL";
                         bindings = <
-   &kp EXCL   &kp AT       &kp HASH     &kp DLLR    &kp PRCNT     &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-   &none      &kp LBRC     &kp LBKT     &kp LPAR    &kp GRAVE     &kp TILDE &kp MINUS &kp PLUS  &kp EQUAL &none
-   &kp PIPE   &kp RBRC     &kp RBKT     &kp RPAR    &none         &none     &kp UNDER &kp SEMI  &kp COLON &kp BSLH
-              &none        LY_ADJ       LY_NUM                 &none     &trans    &none
+   &kp LBRC   &kp AMPS     &kp STAR     &kp GRAVE   &kp RBRC      &none     &none     &none     &none     &kp PIPE
+   &kp LPAR   &kp DLLR     &kp PRCNT    &kp CARET   &kp RPAR      &kp TILDE &kp MINUS &kp PLUS  &kp EQUAL &none
+   &kp LBKT   &kp EXCL     &kp AT       &kp HASH    &kp RBKT      &none     &kp UNDER &kp SEMI  &kp COLON &kp BSLH
+              &none        LY_ADJ       LY_NUM                              &none     &trans    &none
                         >;
                 };
 
                 number_layer {
                         label = "NUMBER";
                         bindings = <
-   &kp N1     &kp N2    &kp N3    &kp N4       &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-   &sk LGUI   &sk LALT  &sk LCTRL &sk LSHFT    &none         &kp MINUS &kp PLUS  &kp STAR  &kp FSLH  &none
-   &none      &none     &kp TAB   &kp BSPC     &none         &none     &none     &kp COMMA &kp DOT   &none
-              &none     &none     &trans                            &none     &trans    &none
+   &none      &kp N7       &kp N8       &kp N9      &kp PLUS      &none     &none     &none     &none     &none
+   &kp N0     &kp N4       &kp N5       &kp N6      &kp MINUS     &none     &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI
+   &kp DOT    &kp N1       &kp N2       &kp N3      &kp EQUAL     &none     &none     &kp COMMA &kp DOT   &none
+              &none        &none        &trans                              &none     &trans    &none
                         >;
                 };
 
