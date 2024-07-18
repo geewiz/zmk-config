@@ -11,7 +11,7 @@ enum layer_names {
   _MOUSE,
   _MEDIA,
   _ADJUST
-}
+};
 
 #define TAPPING_TERM 150
 #define QUICK_TAP 200
