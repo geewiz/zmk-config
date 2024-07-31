@@ -111,7 +111,7 @@
    &kp Q      &kp W           &kp F           &kp P       &kp B           &kp J            &kp L        &kp U        &kp Y      &kp SQT
    &kp A      &kp R           &kp S           &kp T       &kp G           &kp M            &kp N        &kp E        &kp I      &kp O
    &kp Z      &kp X           &kp C           &kp D       &kp V           &kp K            &kp H        &kp COMMA    &kp DOT    &kp FSLH
-              &none           LY_NAV          &kp LSHFT                                    &kp SPC      LY_SYM       &none
+              &none           LY_NAV          &kp LSHFT                                    &kp SPC      LY_SYM       LY_NUM
                         >;
                 };
 
@@ -151,7 +151,7 @@
    &none      &kp N7       &kp N8       &kp N9      &kp PLUS      &none     &none     &none     &none     &none
    &kp N0     &kp N4       &kp N5       &kp N6      &kp MINUS     &none     &sk LSHFT &sk LCTRL &sk LALT  &sk LGUI
    &kp DOT    &kp N1       &kp N2       &kp N3      &kp EQUAL     &none     &none     &kp COMMA &kp DOT   &none
-              &none        &none        &trans                              &none     &trans    &none
+              &none        &none        &trans                              &none     &trans    &trans
                         >;
                 };
 
@@ -161,7 +161,7 @@
    &kp LG(N1) &kp LG(N2) &kp LG(N3)  &kp LG(4)   &kp LG(5)     &kp LG(6) &kp LG(7)    &kp LG(8)    &kp LG(9)  &kp LG(0)
    &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none         &none     &none        &none        &none      &none
    &none      &none      &none       &none       &none         &none     &none        &none        &none      &none
-              &trans     &trans      &trans                           &trans       LY_ADJ       &trans
+              &trans     &trans      &trans                              &trans       LY_ADJ       &trans
                         >;
                 };
 
@@ -171,17 +171,17 @@
    &none      &none      &none       &none       &none         &none       &none         &none         &none          &none
    &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none         &none       &kp K_PP      &kp K_STOP2   &kp K_PREV     &kp K_NEXT
    &none      &none      &none       &none       &none         &none       &kp K_VOL_DN  &kp K_MUTE    &kp K_VOL_UP   &none
-              &none      &none       &none                              &none         &none         &trans
+              &none      &none       &none                                 &none         &none         &trans
                         >;
                 };
 
                 adjust_layer {
                         label = "ADJUST";
                         bindings = <
-   &kp F1      &kp F2       &kp F3          &kp F4      &kp F5              &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-   &kp LGUI    &kp LALT     &kp LCTRL       &kp LSHFT   &bootloader         &none         &none         &none         &none         &none
-   &kp F11     &kp F12      &kp PAUSE_BREAK &kp PSCRN   &kp SLCK            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
-               &none        &trans          &none                                      &none         &trans        &none
+   &kp F12     &kp F7       &kp F8          &kp F9       &kp PAUSE_BREAK     &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
+   &kp F11     &kp F4       &kp F5          &kp F6       &kp PSCRN           &none         &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI
+   &kp F10     &kp F1       &kp F2          &kp F3       &kp SLCK            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
+               &none        &trans          &bootloader                                    &bootloader   &trans        &none
                         >;
                 };
 
