@@ -28,7 +28,7 @@
 
 /* Layer taps */
 #define ESC_NAV &lt _NAVI ESC
-#define O_NAV &lt _NAVI O
+#define O_NAV   &lt _NAVI O
 #define SPC_NUM &lt _NUMBER SPC
 #define RET_SYM &lt _SYMBOL RET
 
@@ -82,27 +82,12 @@
             key-positions = <21 22>;
             bindings = <&sk LCTL>;
         };
-
     };
 };
 
 &lt {
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP>;
-};
-
-/ {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            quick-tap-ms = <QUICK_TAP>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
 };
 
 / {
@@ -121,7 +106,7 @@
    &kp Q      &kp W           &kp F           &kp P       &kp B           &kp J            &kp L        &kp U        &kp Y      &kp SQT
    &kp A      &kp R           &kp S           &kp T       &kp G           &kp M            &kp N        &kp E        &kp I      O_NAV
    &kp Z      &kp X           &kp C           &kp D       &kp V           &kp K            &kp H        &kp COMMA    &kp DOT    &kp FSLH
-        &kp LGUI        LY_NUM          &kp LSHFT                                    &kp SPC      LY_SYM       &kp LALT
+              &kp LGUI        LY_NUM          &kp LSHFT                                    &kp SPC      LY_SYM       &kp LALT
                         >;
                 };
 
@@ -188,7 +173,7 @@
                 adjust_layer {
                         label = "ADJUST";
                         bindings = <
-   &kp F12     &kp F7       &kp F8          &kp F9       &kp PAUSE_BREAK     &kp none      &kp none      &kp none      &kp none      &kp none
+   &kp F12     &kp F7       &kp F8          &kp F9       &kp PAUSE_BREAK     &none         &none         &none         &none         &none
    &kp F11     &kp F4       &kp F5          &kp F6       &kp PSCRN           &none         &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI
    &kp F10     &kp F1       &kp F2          &kp F3       &kp SLCK            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
                &none        &trans          &bootloader                                    &bootloader   &trans        &none
