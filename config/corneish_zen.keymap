@@ -82,6 +82,21 @@
             key-positions = <21 22>;
             bindings = <&sk LCTL>;
         };
+        combo_gui {
+            layers = <0 1 2 3 4 5 6 7>;
+            timeout-ms = <50>;
+            // NUM + SHIFT = SUPER
+            key-positions = <31 32>;
+            bindings = <&sk LGUI>;
+        };
+        combo_alt {
+            layers = <0 1 2 3 4 5 6 7>;
+            timeout-ms = <50>;
+            // SPACE + SYM = ALT
+            key-positions = <33 34>;
+            bindings = <&sk LALT>;
+        };
+
     };
 };
 
