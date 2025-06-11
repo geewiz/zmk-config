@@ -3,13 +3,12 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define _DEFAULT 0
-#define _GAME 1
-#define _NAVI 2
-#define _SYMBOL 3
-#define _NUMBER 4
-#define _MOUSE 5
-#define _MEDIA 6
-#define _ADJUST 7
+#define _NAVI 1
+#define _SYMBOL 2
+#define _NUMBER 3
+#define _MOUSE 4
+#define _MEDIA 5
+#define _ADJUST 6
 
 #define TAPPING_TERM 150
 #define QUICK_TAP 200
