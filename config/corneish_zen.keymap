@@ -27,7 +27,7 @@
 
 /* Layer taps */
 #define ESC_NAV &lt _NAVI ESC
-#define O_NAV   &lt _NAVI O
+#define SQT_NAV &lt _NAVI SQT
 #define SPC_NUM &lt _NUMBER SPC
 #define RET_SYM &lt _SYMBOL RET
 
@@ -115,11 +115,11 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "CMAK";
+                        label = "DEFAULT";
                         bindings = <
-   &kp Q      &kp W           &kp F           &kp P       &kp B           &kp J            &kp L        &kp U        &kp Y      &kp SQT
-   &kp A      &kp R           &kp S           &kp T       &kp G           &kp M            &kp N        &kp E        &kp I      O_NAV
-   &kp Z      &kp X           &kp C           &kp D       &kp V           &kp K            &kp H        &kp COMMA    &kp DOT    &kp BSPC
+   &kp Q      &kp W           &kp E           &kp R       &kp T           &kp Y            &kp U        &kp I        &kp O      &kp P
+   &kp A      &kp S           &kp D           &kp F       &kp G           &kp H            &kp J        &kp K        &kp L      SQT_NAV
+   &kp Z      &kp X           &kp C           &kp V       &kp B           &kp N            &kp M        &kp COMMA    &kp DOT    &kp BSPC
               &kp LGUI        LY_NUM          &kp LSHFT                                    &kp SPC      LY_SYM       &kp LCTL
                         >;
                 };
