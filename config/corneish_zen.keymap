@@ -26,10 +26,7 @@
 #define LY_ADJ &mo _ADJUST
 
 /* Layer taps */
-#define ESC_NAV &lt _NAVI ESC
-#define SQT_NAV &lt _NAVI SQT
-#define SPC_NUM &lt _NUMBER SPC
-#define RET_SYM &lt _SYMBOL RET
+#define BSP_NAV &lt _NAVI BSPC
 
 /* Mod taps */
 #define BSP_SFT &mt LSHFT BSPC
@@ -118,8 +115,8 @@
                         label = "DEFAULT";
                         bindings = <
    &kp Q      &kp W           &kp E           &kp R       &kp T           &kp Y            &kp U        &kp I        &kp O      &kp P
-   &kp A      &kp S           &kp D           &kp F       &kp G           &kp H            &kp J        &kp K        &kp L      SQT_NAV
-   &kp Z      &kp X           &kp C           &kp V       &kp B           &kp N            &kp M        &kp COMMA    &kp DOT    &kp BSPC
+   &kp A      &kp S           &kp D           &kp F       &kp G           &kp H            &kp J        &kp K        &kp L      BSP_NAV
+   &kp Z      &kp X           &kp C           &kp V       &kp B           &kp N            &kp M        &kp COMMA    &kp DOT    &kp FSLH
               &kp LGUI        LY_NUM          &kp LSHFT                                    &kp SPC      LY_SYM       &kp LCTL
                         >;
                 };
@@ -137,7 +134,7 @@
                 symbol_layer {
                         label = "SYMBOL";
                         bindings = <
-   &kp LBRC   &kp AMPS     &kp STAR     &kp PIPE    &kp RBRC      &none     &kp FSLH  &none     &none     &kp GRAVE
+   &kp LBRC   &kp AMPS     &kp STAR     &kp PIPE    &kp RBRC      &none     &kp SQUO  &kp DQUO  &none     &kp GRAVE
    &kp LPAR   &kp DLLR     &kp PRCNT    &kp CARET   &kp RPAR      &kp TILDE &kp MINUS &kp PLUS  &kp EQUAL &kp QMARK
    &kp LBKT   &kp EXCL     &kp AT       &kp HASH    &kp RBKT      &none     &kp UNDER &kp SEMI  &kp COLON &kp BSLH
               &none        LY_ADJ       &none                               &none     &trans    &none
