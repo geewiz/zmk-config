@@ -115,7 +115,7 @@
                         label = "DEFAULT";
                         bindings = <
    &kp Q      &kp W           &kp E           &kp R       &kp T           &kp Y            &kp U        &kp I        &kp O      &kp P
-   &kp A      &kp S           &kp D           &kp F       &kp G           &kp H            &kp J        &kp K        &kp L      BSP_NAV
+   &kp A      &kp S           &kp D           &kp F       &kp G           &kp H            &kp J        &kp K        &kp L      LY_NAV
    &kp Z      &kp X           &kp C           &kp V       &kp B           &kp N            &kp M        &kp COMMA    &kp DOT    &kp FSLH
               &kp LGUI        LY_NUM          &kp LSHFT                                    &kp SPC      LY_SYM       &kp LCTL
                         >;
