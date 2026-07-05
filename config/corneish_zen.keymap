@@ -23,8 +23,6 @@
 #define LY_SYM &mo _SYMBOL
 #define LY_NAV &mo _NAVI
 #define LY_NUM &mo _NUMBER
-#define LY_MSE &mo _MOUSE
-#define LY_MED &mo _MEDIA
 #define LY_ADJ &mo _ADJUST
 
 /* Layer taps */
@@ -119,7 +117,7 @@
    &kp Q      &kp W           &kp E           &kp R       &kp T           &kp Y            &kp U        &kp I        &kp O      &kp P
    &kp A      &kp S           &kp D           &kp F       &kp G           &kp H            &kp J        &kp K        &kp L      LY_NAV
    &kp Z      &kp X           &kp C           &kp V       &kp B           &kp N            &kp M        &kp COMMA    &kp DOT    &kp FSLH
-              LY_MSE          LY_NUM          &kp LSHFT                                    &kp SPC      LY_SYM       LY_MED
+              &kp LGUI        LY_NUM          &kp LSHFT                                    &kp SPC      LY_SYM       &kp LCTL
                         >;
                 };
 
@@ -146,20 +144,20 @@
                 number_layer {
                         label = "NUMBER";
                         bindings = <
-   &none      &none        &none        &none       &none         &kp STAR  &kp N7    &kp N8    &kp N9    &kp FSLH
-   &sk LGUI   &sk LALT     &sk LCTRL    &sk LSHFT   &none         &kp MINUS &kp N4    &kp N5    &kp N6    &kp N0
-   &none      &none        &none        &none       &none         &kp PLUS  &kp N1    &kp N2    &kp N3    &kp DOT
-              &none        &trans       &none                               &kp BSPC  LY_ADJ    &none
+   &none      &none        &none        &none       &none         &none     &kp N7    &kp N8    &kp N9    &kp EQUAL
+   &sk LGUI   &sk LALT     &sk LCTRL    &sk LSHFT   &none         &kp MINUS &kp N4    &kp N5    &kp N6    &kp STAR
+   &none      &none        &none        &none       &none         &kp PLUS  &kp N1    &kp N2    &kp N3    &kp FSLH
+              &trans       &trans       &none                               &kp BSPC  &kp N0    &kp DOT
                         >;
                 };
 
                 mouse_layer {
                         label = "MOUSE";
                         bindings = <
-   &kp LG(1)  &kp LG(2)  &kp LG(3)   &kp LG(4)   &kp LG(5)     &kp LG(6) &kp LG(7)    &kp LG(8)    &kp LG(9)  &kp LG(0)
+   &kp LG(N1) &kp LG(N2) &kp LG(N3)  &kp LG(4)   &kp LG(5)     &kp LG(6) &kp LG(7)    &kp LG(8)    &kp LG(9)  &kp LG(0)
    &kp LGUI   &kp LALT   &kp LCTRL   &kp LSHFT   &none         &none     &none        &none        &none      &none
    &none      &none      &none       &none       &none         &none     &none        &none        &none      &none
-              &trans     &trans      &trans                              &trans       &trans       &trans
+              &trans     &trans      &trans                              &trans       LY_ADJ       &trans
                         >;
                 };
 
