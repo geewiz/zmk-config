@@ -52,6 +52,7 @@
 / {
   combos {
     compatible = "zmk,combos";
+
     // Umlauts; requires EUR keymap
     combo_uauml {
       timeout-ms = <50>;
