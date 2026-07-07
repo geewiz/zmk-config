@@ -60,11 +60,11 @@ MOUSE_LAYER
       >;
     };
 
-    adjust_layer {
-      label = "ADJUST";
+    function_layer {
+      label = "FUNCTION";
       bindings = <
-ADJUST_LAYER
-&trans     &trans      &bootloader    &bootloader  &trans     &trans
+FUNCTION_LAYER
+&trans     &bootloader      &trans    &trans  &bootloader     &trans
       >;
     };
   };

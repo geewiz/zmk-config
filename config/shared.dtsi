@@ -16,21 +16,7 @@
 #define _SYMBOL 2
 #define _NUMBER 3
 #define _MOUSE 4
-#define _ADJUST 5
-
-/* Layers (momentary) */
-#define LY_SYM &mo _SYMBOL
-#define LY_NAV &mo _NAVI
-#define LY_NUM &mo _NUMBER
-#define LY_MSE &mo _MOUSE
-#define LY_MED &mo _MEDIA
-#define LY_ADJ &mo _ADJUST
-
-/* Layer taps */
-#define BSP_NAV &lt _NAVI BSPC
-
-/* Mod taps */
-#define BSP_SFT &mt LSHFT BSPC
+#define _FUNCTION 5
 
 &lt {
     tapping-term-ms = <TAPPING_TERM>;
@@ -115,9 +101,9 @@
   conditional_layers {
     compatible = "zmk,conditional-layers";
 
-    adjust_layer {
+    function_layer {
       if-layers = <_MOUSE _NAVI>;
-      then-layer = <_ADJUST>;
+      then-layer = <_FUNCTION>;
     };
   };
 
@@ -174,7 +160,7 @@
   &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans             &trans        &mkp MB1      &mkp MB2      &mkp MB3      &kp LCTRL \
   &trans          &trans          &trans          &trans           &trans             &trans        &trans        &trans        &trans        &kp LSHFT
 
-#define ADJUST_LAYER \
+#define FUNCTION_LAYER \
   &kp F12         &kp F7          &kp F8          &kp F9          &kp PAUSE_BREAK     &NEXT_PREV    &DWN_MUTE     &kp C_PP      &kp C_VOL_UP  &none \
   &kp F11         &kp F4          &kp F5          &kp F6          &kp PSCRN           &none         &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI \
   &kp F10         &kp F1          &kp F2          &kp F3          &kp SLCK            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
