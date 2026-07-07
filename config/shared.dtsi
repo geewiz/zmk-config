@@ -113,21 +113,14 @@
     };
   };
 
-/* for later:
   conditional_layers {
     compatible = "zmk,conditional-layers";
 
-    mouse_layer {
-      if-layers = <SYMBOL CONTROL>;
-      then-layer = <MOUSE>;
-    };
-
     adjust_layer {
-      if-layers = <SHORTCUTS CONTROL>;
-      then-layer = <ADJUST>;
+      if-layers = <_MOUSE _NAVI>;
+      then-layer = <_ADJUST>;
     };
   };
-*/
 
   behaviors {
     hm: homerow_mods {
