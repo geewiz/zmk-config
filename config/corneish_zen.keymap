@@ -24,7 +24,7 @@
       label = "QWERTY";
       bindings = <
 QWERTY_LAYER
-LY_MSE     LY_NUM     &kp LSHFT    &lt NAVI SPACE   LY_SYM     LY_MED
+LY_MSE     LY_NUM     &kp LSHFT    &lt _NAVI SPACE   LY_SYM     LY_MED
       >;
     };
 
