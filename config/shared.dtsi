@@ -138,27 +138,6 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
-    NEXT_PREV: tap_dance_0 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "NEXT_PREV";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp C_NEXT>, <&kp C_PREV>;
-    };
-    SCRNSHT: tap_dance_1 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "SCRNSHT";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp SCRN>, <&kp SCR2>;
-    };
-    DWN_MUTE: tap_dance_2 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "DWN_MUTE";
-      #binding-cells = <0>;
-      tapping-term-ms = <120>;
-      bindings = <&kp C_VOL_DN>, <&kp C_MUTE>;
-    };
   };
 };
 
