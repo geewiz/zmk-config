@@ -142,8 +142,8 @@
       compatible = "zmk,behavior-tap-dance";
       label = "DWN_MUTE";
       #binding-cells = <0>;
-      tapping-term-ms = <120>;
-      bindings = <&kp K_VOL_DN>, <&kp K_MUTE>;
+      tapping-term-ms = <150>;
+      bindings = <&kp C_VOL_DN>, <&kp C_MUTE>;
     };
   };
 };
@@ -175,6 +175,6 @@
   &trans          &trans          &trans          &trans           &trans             &trans        &trans        &trans        &trans        &kp LSHFT
 
 #define ADJUST_LAYER \
-  &kp F12         &kp F7          &kp F8          &kp F9          &kp PAUSE_BREAK     &NEXT_PREV    &DWN_MUTE     &kp K_PP      &kp K_VOL_UP  &none \
+  &kp F12         &kp F7          &kp F8          &kp F9          &kp PAUSE_BREAK     &NEXT_PREV    &DWN_MUTE     &kp C_PP      &kp C_VOL_UP  &none \
   &kp F11         &kp F4          &kp F5          &kp F6          &kp PSCRN           &none         &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI \
   &kp F10         &kp F1          &kp F2          &kp F3          &kp SLCK            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
