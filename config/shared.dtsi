@@ -16,8 +16,7 @@
 #define _SYMBOL 2
 #define _NUMBER 3
 #define _MOUSE 4
-#define _MEDIA 5
-#define _ADJUST 6
+#define _ADJUST 5
 
 /* Layers (momentary) */
 #define LY_SYM &mo _SYMBOL
@@ -132,6 +131,20 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
     };
+    NEXT_PREV: tap_dance_0 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "NEXT_PREV";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp K_NEXT>, <&kp K_PREV>;
+    };
+    DWN_MUTE: tap_dance_1 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "DWN_MUTE";
+      #binding-cells = <0>;
+      tapping-term-ms = <120>;
+      bindings = <&kp K_VOL_DN>, <&kp K_MUTE>;
+    };
   };
 };
 
@@ -161,12 +174,7 @@
   &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans             &trans        &mkp MB1      &mkp MB2      &mkp MB3      &kp LCTRL \
   &trans          &trans          &trans          &trans           &trans             &trans        &trans        &trans        &trans        &kp LSHFT
 
-#define MEDIA_LAYER \
-  &none           &none           &none           &none           &none               &none         &none         &none         &none         &none \
-  &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &none               &none         &kp K_PP      &kp K_STOP2   &kp K_PREV    &kp K_NEXT \
-  &none           &none           &none           &none           &none               &none         &kp K_VOL_DN  &kp K_MUTE    &kp K_VOL_UP  &none
-
 #define ADJUST_LAYER \
-  &kp F12         &kp F7          &kp F8          &kp F9          &kp PAUSE_BREAK     &none         &none         &none         &none         &none \
+  &kp F12         &kp F7          &kp F8          &kp F9          &kp PAUSE_BREAK     &NEXT_PREV    &DWN_MUTE     &kp K_PP      &kp K_VOL_UP  &none \
   &kp F11         &kp F4          &kp F5          &kp F6          &kp PSCRN           &none         &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI \
   &kp F10         &kp F1          &kp F2          &kp F3          &kp SLCK            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR

@@ -24,7 +24,7 @@
       label = "QWERTY";
       bindings = <
 QWERTY_LAYER
-LY_MSE     &lt _NUMBER BSPC  &lt _MOUSE ESC    &lt _NAVI RET  &lt _SYMBOL SPACE  LY_MED
+&none     &lt _NUMBER BSPC  &lt _MOUSE ESC    &lt _NAVI RET  &lt _SYMBOL SPACE  &none
       >;
     };
 
