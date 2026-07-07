@@ -60,14 +60,6 @@ MOUSE_LAYER
       >;
     };
 
-    media_layer {
-      label = "MEDIA";
-      bindings = <
-MEDIA_LAYER
-&trans  &trans  &trans    &trans  &trans  &trans
-      >;
-    };
-
     adjust_layer {
       label = "ADJUST";
       bindings = <
