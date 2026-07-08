@@ -77,7 +77,7 @@
     compatible = "zmk,conditional-layers";
 
     function_layer {
-      if-layers = <_MOUSE _NAVI>;
+      if-layers = <_NUMBER _MOUSE>;
       then-layer = <_FUNCTION>;
     };
   };
