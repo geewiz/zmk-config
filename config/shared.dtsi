@@ -118,7 +118,7 @@
 #define NAVI_LAYER \
   &sk RGUI        &sk RALT        &sk RCTRL       &sk RSHFT        &none              &caps_word    &kp LC(X)     &kp LC(C)     &kp LC(V)     &none \
   &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT        &none              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp TAB \
-  &kp none        &none           &none           &none            &kp INS            &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp DEL
+  &none           &none           &none           &none            &kp INS            &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp DEL
 
 #define SYMBOL_LAYER \
   &kp LBRC        &kp AMPS        &kp STAR        &kp PIPE         &kp RBRC           &none         &kp SQT       &kp DQT       &none         &kp GRAVE \
