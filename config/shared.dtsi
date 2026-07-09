@@ -116,9 +116,9 @@
   &kp Z           &kp X           &kp C           &kp V            &kp B              &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 
 #define NAVI_LAYER \
-  &sk RGUI        &sk RALT        &sk RCTRL       &sk RSHFT        &none              &kp TAB       &kp ESC       &none         &caps_word    &none \
-  &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT        &kp LGUI           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &trans \
-  &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)        &kp INS            &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp DEL
+  &sk RGUI        &sk RALT        &sk RCTRL       &sk RSHFT        &none              &caps_word    &kp LC(X)     &kp LC(C)     &kp LC(V)     &none \
+  &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT        &none              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp TAB \
+  &kp none        &none           &none           &none            &kp INS            &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp DEL
 
 #define SYMBOL_LAYER \
   &kp LBRC        &kp AMPS        &kp STAR        &kp PIPE         &kp RBRC           &none         &kp SQT       &kp DQT       &none         &kp GRAVE \
