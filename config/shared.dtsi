@@ -116,7 +116,7 @@
   &kp Z           &kp X           &kp C           &kp V            &kp B              &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
 
 #define NAVI_LAYER \
-  &sk RGUI        &sk RALT        &sk RCTRL       &sk RSHFT        &none              &caps_word    &kp LC(X)     &kp LC(C)     &kp LC(V)     &LC(Z) \
+  &sk RGUI        &sk RALT        &sk RCTRL       &sk RSHFT        &none              &caps_word    &kp LC(X)     &kp LC(C)     &kp LC(V)     &kp LC(Z) \
   &sk LGUI        &sk LALT        &sk LCTRL       &sk LSHFT        &none              &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp TAB \
   &none           &none           &none           &none            &kp INS            &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp DEL
 
